@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ridwan Al Falhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo"><a href="index.html">RAF<span>_</span></a></div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="Resume.html">Resume</a>
+      <!-- <a href="lab.html">Local Lab</a> -->
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+ 
+<main>
+ 
+<section id="profil" class="wrap" style="padding-top:56px;">
+  <div class="sec-head">
+    <!-- <div class="tag">Profil</div> -->
+    <h2>Professional Summary</h2>
+  </div>
+  <div class="card profile-card">
+    <div class="profile-flex">
+      <img src="Foto-Ridwan.jpg" alt="Foto Ridwan Al Falhan" class="profile-photo">
+      <p>I am a graduate of the Computer Science program at the Bandung National Institute of Technology. With my experience in the field of information technology, I am highly motivated to complete my work, take responsibility for all assigned tasks, work well in a team, and am accustomed to making well-considered decisions.</p>
+    </div>
+  </div>
+</section>
+ 
+ 
+ 
+<section id="pendidikan" class="wrap">
+  <div class="sec-head">
+    <h2>Education</h2>
+  </div>
+  <div class="card edu-card">
+    <!-- <div class="edu-stamp"><span class="yr">2025</span>lulus</div> -->
+    <div>
+      <h3>Bachelor of Science in Computer Science, class of 2025</h3>
+      <div class="place-date">National Institute of Technology (ITENAS) — Bandung, West Java, Indonesia </div>
+      <p style="color:var(--ink-soft); font-size:14px; margin-top:8px;">GPA 3.42 / 4.00</p>
+    </div>
+  </div>
+</section>
+ 
+ 
+</main>
+ 
+<footer>© 2026 Ridwan Al Falhan</footer>
+ 
+<script>
+  const hops = document.querySelectorAll('.hop');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.2});
+  hops.forEach(h=>io.observe(h));
+ 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hops.forEach(h=>h.classList.add('in'));
+  }
+</script>
+ 
+</body>
+</html>
