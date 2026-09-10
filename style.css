@@ -108,13 +108,49 @@ section{padding:64px 0;}
  
 /* ===== About: profile ===== */
 .profile-card p{color:var(--ink-soft); font-size:15px; margin:0;}
-.profile-flex{display:flex; gap:26px; align-items:center;}
+.profile-flex{display:flex; gap:36px; align-items:flex-start;}
+
+.profile-side{
+  flex:0 0 auto;
+  width:180px;
+  text-align:center;
+}
+
 .profile-photo{
   width:140px; height:140px; border-radius:50%; object-fit:cover;
   border:2px solid var(--line); flex-shrink:0; background:var(--bg);
+  display:block; margin:0 auto 16px;
 }
+
+.profile-name{
+  font-family:'Space Grotesk', sans-serif;
+  font-size:19px;
+  font-weight:700;
+  color:var(--ink);
+  margin:0 0 4px;
+}
+
+.profile-role{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  color:var(--ink-soft);
+  line-height:1.6;
+  margin:0;
+}
+
+.profile-bio{
+  flex:1;
+  color:var(--ink-soft);
+  font-size:15px;
+  line-height:1.7;
+  margin:0;
+}
+
+
+
 @media (max-width:600px){
-  .profile-flex{flex-direction:column; text-align:center;}
+  .profile-flex{flex-direction:column; align-items:center; text-align:center;}
+  .profile-side{width:100%;}
 }
  
 /* Traceroute (pengalaman) */
