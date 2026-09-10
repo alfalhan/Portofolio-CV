@@ -107,18 +107,23 @@ section{padding:64px 0;}
 @media (max-width:640px){.statusbar{grid-template-columns:repeat(2,1fr);}}
  
 /* ===== About: profile ===== */
-.profile-card p{color:var(--ink-soft); font-size:15px; margin:0;}
-.profile-flex{display:flex; gap:36px; align-items:flex-start;}
+.profile-flex{
+  display:flex;
+  flex-direction:row;
+  gap:36px;
+  align-items:flex-start;
+  flex-wrap:nowrap;
+}
 
 .profile-side{
-  flex:0 0 auto;
+  flex:0 0 180px;
   width:180px;
   text-align:center;
 }
 
 .profile-photo{
   width:140px; height:140px; border-radius:50%; object-fit:cover;
-  border:2px solid var(--line); flex-shrink:0; background:var(--bg);
+  border:2px solid var(--line); background:var(--bg);
   display:block; margin:0 auto 16px;
 }
 
@@ -135,22 +140,53 @@ section{padding:64px 0;}
   font-size:12px;
   color:var(--ink-soft);
   line-height:1.6;
-  margin:0;
+  margin:0 0 18px;
+}
+
+.profile-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.profile-btn{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  color:var(--ink);
+  text-decoration:none;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:8px 12px;
+  text-align:center;
+  transition:border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.profile-btn:hover, .profile-btn:focus-visible{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(217,142,43,0.06);
+  outline:none;
 }
 
 .profile-bio{
   flex:1;
+  min-width:0;
   color:var(--ink-soft);
   font-size:15px;
   line-height:1.7;
   margin:0;
 }
 
-
-
-@media (max-width:600px){
-  .profile-flex{flex-direction:column; align-items:center; text-align:center;}
-  .profile-side{width:100%;}
+@media (max-width:640px){
+  .profile-flex{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .profile-side{
+    width:100%;
+    flex:none;
+  }
 }
  
 /* Traceroute (pengalaman) */
