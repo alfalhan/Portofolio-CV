@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Ridwan Al Falhan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo"><a href="index.html">RAF<span>_</span></a></div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="index-2.html">About</a>
+        <a href="index-3.html">Resume</a>
+        <a href="index-5.html" class="active">Project</a>
+        <a href="index-4.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1: FEATURED PROJECT (OWASP + S-BERT + GEMINI AI) -->
+    <section class="wrap" style="padding-top:56px; padding-bottom:30px;">
+      <div class="sec-head">
+        <div class="tag">project portfolio · cybersecurity &amp; ai</div>
+        <h2>Featured Project &amp; Research</h2>
+        <p class="lede">Engineering intelligent systems in cybersecurity vulnerability assessment, Natural Language Processing (NLP), Large Language Model (LLM) reasoning, and hands-on network infrastructure.</p>
+      </div>
+
+      <!-- MAIN PROJECT CARD -->
+      <div class="project-featured">
+        <div class="project-header">
+          <div class="project-badge-top">Live Deployment · Streamlit Cloud</div>
+          <h3 class="project-title">
+            Cybersecurity Vulnerability Assessment &amp; OWASP Top 10 Mapping System Using Sentence-BERT and Google Gemini AI
+          </h3>
+          <p class="project-desc">
+            An automated cybersecurity vulnerability assessment platform that ingests and standardizes scan reports from two industry-leading vulnerability scanners (<strong>Nessus</strong> and <strong>OpenVAS</strong>). The system utilizes the <strong>Sentence-BERT (<code>paraphrase-MiniLM-L6-v2</code>)</strong> NLP model to compute semantic embedding representations and calculate <em>cosine similarity</em> across multi-scanner findings, accurately maps technical vulnerabilities to the international <strong>OWASP Top 10</strong> standard taxonomy, and integrates <strong>Google Gemini AI</strong> to deliver executive summaries, scientific reasoning for vulnerability relationships, and actionable mitigation checklists ready for engineering execution.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://vulnerability-assessment-owasp.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-cta">
+              Launch Streamlit App ↗
+            </a>
+            <a href="#architecture" class="btn-outline">
+              System Pipeline Architecture ↓
+            </a>
+          </div>
+
+          <div class="tech-badges">
+            <span class="tech-badge teal">Streamlit Web App</span>
+            <span class="tech-badge teal">Sentence-BERT (MiniLM-L6-v2)</span>
+            <span class="tech-badge teal">Google Gemini AI</span>
+            <span class="tech-badge amber">OWASP Top 10</span>
+            <span class="tech-badge amber">Nessus Scanner</span>
+            <span class="tech-badge amber">OpenVAS Scanner</span>
+            <span class="tech-badge">Python 3.10</span>
+            <span class="tech-badge">Cosine Similarity</span>
+            <span class="tech-badge">PyMuPDF (fitz)</span>
+          </div>
+        </div>
+
+        <!-- KEY METRICS ROW -->
+        <div class="metric-row">
+          <div class="metric-box">
+            <div class="mk">Benchmark Standard</div>
+            <div class="mv">OWASP Top 10</div>
+          </div>
+          <div class="metric-box">
+            <div class="mk">Semantic NLP Model</div>
+            <div class="mv">Sentence-BERT</div>
+          </div>
+          <div class="metric-box">
+            <div class="mk">AI Reasoning</div>
+            <div class="mv">Google Gemini</div>
+          </div>
+          <div class="metric-box">
+            <div class="mk">Live Platform</div>
+            <div class="mv">Streamlit Cloud</div>
+          </div>
+        </div>
+
+        <!-- PIPELINE DIAGRAM -->
+        <div id="architecture" style="margin-top:36px;">
+          <h4 style="font-family:'Space Grotesk', sans-serif; font-size:18px; margin-bottom:12px; color:var(--ink);">
+            System Pipeline Architecture
+          </h4>
+          <div class="card topo-card" style="padding:18px; background:var(--bg);">
+            <svg viewBox="0 0 860 210" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="System architecture pipeline diagram: Nessus and OpenVAS scan reports are extracted via PyMuPDF, processed by Sentence-BERT for Cosine Similarity, mapped to OWASP Top 10, analyzed by Google Gemini AI, and presented on the Streamlit dashboard">
+              <defs>
+                <marker id="arrow-teal" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6"
+                  orient="auto-start-reverse">
+                  <path d="M0,0 L8,4 L0,8 z" fill="#2e9e8f" />
+                </marker>
+                <marker id="arrow-amber" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6"
+                  orient="auto-start-reverse">
+                  <path d="M0,0 L8,4 L0,8 z" fill="#d98e2b" />
+                </marker>
+              </defs>
+
+              <!-- Connection Lines -->
+              <g stroke="#8894ac" stroke-width="1.8" marker-end="url(#arrow-teal)">
+                <line x1="140" y1="65" x2="190" y2="65" />
+                <line x1="330" y1="65" x2="380" y2="65" />
+                <line x1="520" y1="65" x2="570" y2="65" />
+                <line x1="710" y1="65" x2="745" y2="65" />
+              </g>
+
+              <!-- Downward feedback to Streamlit dashboard -->
+              <g stroke="#d98e2b" stroke-width="1.8" marker-end="url(#arrow-amber)">
+                <path d="M 805,100 L 805,160 L 640,160" fill="none" />
+                <path d="M 260,100 L 260,160 L 290,160" fill="none" />
+              </g>
+
+              <!-- Node 1: Scanner Input -->
+              <g>
+                <rect x="20" y="30" width="120" height="70" rx="8" fill="#090000" stroke="#c7d0de" stroke-width="1.6" />
+                <text x="80" y="58" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#ffffff">Scanner Ingestion</text>
+                <text x="80" y="78" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#8894ac">Nessus / OpenVAS</text>
+              </g>
+
+              <!-- Node 2: PyMuPDF & Preprocess -->
+              <g>
+                <rect x="190" y="30" width="140" height="70" rx="8" fill="#090000" stroke="#c7d0de" stroke-width="1.6" />
+                <text x="260" y="58" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#ffffff">Text Extraction</text>
+                <text x="260" y="78" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#8894ac">PyMuPDF &amp; Cleaning</text>
+              </g>
+
+              <!-- Node 3: Sentence-BERT -->
+              <g>
+                <rect x="380" y="30" width="140" height="70" rx="8" fill="#090000" stroke="#2e9e8f" stroke-width="1.8" />
+                <text x="450" y="56" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#2e9e8f">Sentence-BERT</text>
+                <text x="450" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#ffffff">MiniLM-L6-v2</text>
+                <text x="450" y="88" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8894ac">Cosine Similarity</text>
+              </g>
+
+              <!-- Node 4: OWASP Mapping -->
+              <g>
+                <rect x="570" y="30" width="140" height="70" rx="8" fill="#090000" stroke="#d98e2b" stroke-width="1.8" />
+                <text x="640" y="56" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#d98e2b">OWASP Mapping</text>
+                <text x="640" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#ffffff">Top 10 Taxonomy</text>
+                <text x="640" y="88" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8894ac">Categories A01-A10</text>
+              </g>
+
+              <!-- Node 5: Google Gemini AI -->
+              <g>
+                <rect x="745" y="30" width="105" height="70" rx="8" fill="#090000" stroke="#2e9e8f" stroke-width="1.8" />
+                <text x="797" y="56" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="12" fill="#2e9e8f">Gemini AI</text>
+                <text x="797" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#ffffff">Reasoning</text>
+                <text x="797" y="88" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#8894ac">&amp; Remediation</text>
+              </g>
+
+              <!-- Node 6: Streamlit UI Dashboard -->
+              <g>
+                <rect x="290" y="135" width="350" height="52" rx="8" fill="#090000" stroke="#2e9e8f" stroke-width="1.6" />
+                <text x="465" y="157" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#ffffff">
+                  Streamlit Interactive Web Application
+                </text>
+                <text x="465" y="174" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#2e9e8f">
+                  vulnerability-assessment-owasp.streamlit.app
+                </text>
+              </g>
+            </svg>
+            <div class="topo-caption mono">
+              Pipeline Architecture: Multi-Scanner Ingestion &rarr; PyMuPDF Parsing &rarr; Sentence-BERT Embeddings &rarr; OWASP Top 10 Mapping &rarr; Google Gemini AI Reasoning &rarr; Streamlit Dashboard.
+            </div>
+          </div>
+        </div>
+
+        <!-- KEY FEATURES GRID -->
+        <div style="margin-top:34px;">
+          <h4 style="font-family:'Space Grotesk', sans-serif; font-size:18px; margin-bottom:12px; color:var(--ink);">
+            Core Capabilities &amp; Key Features
+          </h4>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h4><span>01.</span> Automated Multi-Scanner Ingestion</h4>
+              <p>Directly parses and ingests raw vulnerability assessment scan reports from Nessus and OpenVAS in both PDF and CSV formats using PyMuPDF, eliminating manual document preprocessing.</p>
+            </div>
+            <div class="feature-card">
+              <h4><span>02.</span> Semantic Similarity via Sentence-BERT</h4>
+              <p>Measures cross-scanner vulnerability relevance and correlations by calculating semantic embedding vectors and Cosine Similarity scores with the <code>paraphrase-MiniLM-L6-v2</code> model.</p>
+            </div>
+            <div class="feature-card">
+              <h4><span>03.</span> OWASP Top 10 Taxonomy Classification</h4>
+              <p>Maps technical scanner findings into the world's most critical web application security categories (including Broken Access Control, Injection, and Security Misconfiguration).</p>
+            </div>
+            <div class="feature-card">
+              <h4><span>04.</span> AI Reasoning &amp; Actionable Remediation</h4>
+              <p>Google Gemini AI synthesizes complex findings into clear executive summaries, explains underlying root causes, and delivers structured, step-by-step mitigation checklists.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIVE TERMINAL RUN SIMULATION -->
+        <div style="margin-top:34px;">
+          <h4 style="font-family:'Space Grotesk', sans-serif; font-size:18px; margin-bottom:12px; color:var(--ink);">
+            System Execution Simulation
+          </h4>
+          <div class="terminal">
+            <div class="bar">
+              <div class="dot" style="background:#ff5f57;"></div>
+              <div class="dot" style="background:#febc2e;"></div>
+              <div class="dot" style="background:#28c840;"></div>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#8894ac; margin-left:8px;">vulnerability-assessment@owasp-engine: ~</span>
+            </div>
+            <div class="body">
+              <div class="line"><span class="prompt">$</span> python -m streamlit run GUI.py</div>
+              <div class="line" style="color:#2e9e8f;">[+] Initializing Sentence-BERT Model (paraphrase-MiniLM-L6-v2)... [OK]</div>
+              <div class="line" style="color:#2e9e8f;">[+] Ingesting Scanner Reports: Nessus (.pdf/.csv) &amp; OpenVAS (.pdf)... [OK]</div>
+              <div class="line">[+] Extracting Semantic Embeddings &amp; Computing Cosine Similarity Matrix...</div>
+              <div class="line" style="color:#d98e2b;">[+] Automated OWASP Top 10 Taxonomy Mapping Completed:</div>
+              <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;├── A01: Broken Access Control (Similarity Score: 89.2%)</div>
+              <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;├── A03: Injection (Similarity Score: 92.4%)</div>
+              <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;└── A05: Security Misconfiguration (Similarity Score: 87.8%)</div>
+              <div class="line">[+] Querying Google Gemini AI for Scientific Reasoning &amp; Remediation Plan... [OK]</div>
+              <div class="line" style="color:#28c840; font-weight:600; margin-top:6px;">
+                [SUCCESS] Application Live &amp; Serving at: 
+                <a href="https://vulnerability-assessment-owasp.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color:#28c840; text-decoration:underline;">https://vulnerability-assessment-owasp.streamlit.app/</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CALL TO ACTION BANNER -->
+        <div style="margin-top:30px; text-align:center; padding:22px; background:rgba(46,158,143,0.06); border:1px solid rgba(46,158,143,0.3); border-radius:var(--radius);">
+          <p style="margin:0 0 14px; font-size:15px; color:var(--ink);">
+            Interested in exploring multi-scanner correlation and AI-generated remediation in real time?
+          </p>
+          <a href="https://vulnerability-assessment-owasp.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-cta" style="font-size:14px; padding:12px 24px;">
+            Launch Live App on Streamlit Cloud ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: NETWORK LAB & INFRASTRUCTURE EXPERIMENTS -->
+    <section class="wrap" style="padding-top:20px; padding-bottom:40px; border-top:1px dashed var(--line);">
+      <div class="sec-head">
+        <div class="tag">network infrastructure · hands-on lab</div>
+        <h2>Network Topology &amp; Infrastructure Experiments</h2>
+        <p class="lede">Hands-on practical experience in network topology design, MikroTik router configuration, Linux systems administration, and enterprise infrastructure deployments (PT KAI &amp; ITENAS).</p>
+      </div>
+
+      <div class="card topo-card">
+        <svg viewBox="0 0 700 230" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="Network topology diagram: internet connects to router, then to switch, branching out to access point, server, and PC clients">
+          <defs>
+            <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 z" fill="#8894ac" />
+            </marker>
+          </defs>
+
+          <!-- links -->
+          <g stroke="#8894ac" stroke-width="1.6" marker-end="url(#arrow)">
+            <line x1="130" y1="60" x2="230" y2="60" />
+            <line x1="310" y1="72" x2="310" y2="118" />
+            <line x1="350" y1="150" x2="430" y2="70" />
+            <line x1="350" y1="150" x2="430" y2="150" />
+            <line x1="350" y1="165" x2="430" y2="200" />
+          </g>
+
+          <!-- internet -->
+          <g>
+            <ellipse cx="80" cy="60" rx="48" ry="26" fill="none" stroke="#1b2a4a" stroke-width="1.6" />
+            <text x="80" y="65" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">internet</text>
+          </g>
+
+          <!-- router -->
+          <g>
+            <rect x="240" y="42" width="90" height="36" rx="6" fill="#ffffff" stroke="#d98e2b" stroke-width="1.8" />
+            <text x="285" y="65" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">router</text>
+          </g>
+
+          <!-- switch -->
+          <g>
+            <rect x="240" y="130" width="90" height="36" rx="6" fill="#ffffff" stroke="#2e9e8f" stroke-width="1.8" />
+            <text x="285" y="153" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">switch</text>
+          </g>
+
+          <!-- server -->
+          <g>
+            <rect x="440" y="52" width="90" height="34" rx="6" fill="#ffffff" stroke="#c7d0de" stroke-width="1.6" />
+            <text x="485" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">server lab</text>
+          </g>
+
+          <!-- access point -->
+          <g>
+            <rect x="440" y="132" width="90" height="34" rx="6" fill="#ffffff" stroke="#c7d0de" stroke-width="1.6" />
+            <text x="485" y="154" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">access point</text>
+          </g>
+
+          <!-- pc -->
+          <g>
+            <rect x="440" y="182" width="90" height="34" rx="6" fill="#ffffff" stroke="#c7d0de" stroke-width="1.6" />
+            <text x="485" y="204" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11"
+              fill="#1b2a4a">PC client</text>
+          </g>
+        </svg>
+        <div class="topo-caption mono">Baseline practical topology: internet &rarr; router &rarr; switch &rarr; (server lab / access point / PC client)</div>
+      </div>
+
+      <div style="margin-top:30px;">
+        <h3 style="font-family:'Space Grotesk', sans-serif; font-size:20px; margin-bottom:16px;">Practical Session Logs</h3>
+        <div class="lablog">
+          <div class="log-entry">
+            <div class="bar"><span class="dot"></span> session — itenas-network-lab-assistant</div>
+            <div class="body">
+              <div><span class="prompt">$</span> <span class="cmd">ssh lab@itenas-network-lab</span></div>
+              <div class="meta">Computer Network Laboratory Assistant · ITENAS · Feb – Jun 2023</div>
+              <ul>
+                <li>Instructed laboratory practicums on network cabling standards (straight-through &amp; crossover).</li>
+                <li>Guided hands-on MikroTik configuration and Linux systems (RedHat, Ubuntu) in virtualized VirtualBox environments.</li>
+                <li>Taught foundational computer networking concepts and evaluated student practicum deliverables.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="log-entry">
+            <div class="bar"><span class="dot"></span> session — pt-kai-network-engineer-intern</div>
+            <div class="body">
+              <div><span class="prompt">$</span> <span class="cmd">mikrotik&gt; show interfaces</span></div>
+              <div class="meta">Network Engineer Intern · PT Kereta Api Indonesia (Persero) HQ · Jul – Aug 2022</div>
+              <ul>
+                <li>Installed and configured new enterprise access points to broaden corporate wireless coverage.</li>
+                <li>Deployed and replaced routers to maintain core network uptime and reliability.</li>
+                <li>Diagnosed and resolved network incidents at headquarters and across the Regional Operations Division (DAOP).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:30px;">
+        <h3 style="font-family:'Space Grotesk', sans-serif; font-size:20px; margin-bottom:14px;">Network Hardware &amp; Tools</h3>
+        <div class="card skill-panel">
+          <div class="pill-row">
+            <span class="pill">MikroTik RouterOS</span>
+            <span class="pill">Linux (RedHat, Ubuntu)</span>
+            <span class="pill">VirtualBox</span>
+            <span class="pill">Access Points</span>
+            <span class="pill">Cisco Packet Tracer</span>
+            <span class="pill">Wireshark</span>
+            <span class="pill">LAN Cabling (Straight/Crossover)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2026 Ridwan Al Falhan</footer>
+
+</body>
+
+</html>
